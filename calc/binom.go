@@ -4,5 +4,10 @@ package calc
 // Binomialkoeffizienten "n über k".
 func BinomialCoefficient(n, k int) int {
 	// TODO
+
+	
+
+
+
 	return 0
 }

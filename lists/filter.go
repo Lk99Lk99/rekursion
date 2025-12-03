@@ -5,7 +5,16 @@ package lists
 // Sie können die Hilfsfunktion Empty aus empty.go verwenden.
 func FilterLess(list []int, key int) []int {
 	// TODO
-	return []int{}
+	if Empty(list) {
+		return []int{}
+	}
+
+	if list[0] > key {
+		return FilterLess(list[1:], key)
+
+	}
+
+	return append(list[:1], FilterLess(list[1:], key)...)
 }
 
 // Liefert eine Liste mit allen Elementen aus list, die echt größer als key sind.
@@ -14,6 +23,17 @@ func FilterLess(list []int, key int) []int {
 func FilterGreater(list []int, key int) []int {
 	// Gehen Sie analog zu FilterLess vor.
 
+	if Empty(list) {
+		return []int{}
+	}
+
+	if list[0] < key {
+		return FilterGreater(list[1:], key)
+
+	}
+
+	return append(list[:1], FilterGreater(list[1:], key)...)
+
 	// TODO
-	return []int{}
+
 }

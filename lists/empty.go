@@ -1,6 +1,6 @@
 package lists
 
-/* Dies ist keine Aufgabem sondern eine Hilfsfunktion. */
+/* Dies ist keine Aufgabe sondern eine Hilfsfunktion. */
 
 // Empty ist eine Hilfsfunktion, die prüft, ob eine Liste leer ist.
 // Sie können diese Funktion bei den Aufgaben verwenden.
