@@ -8,5 +8,15 @@ package lists
 // Sie können die Hilfsfunktion Empty aus empty.go verwenden.
 func RemoveElement(list []int, pos int) []int {
 	// TODO
-	return []int{}
+	ziel := []int{}
+	if Empty(list) {
+		return ziel
+	}
+
+	if list[0] == pos {
+
+		return RemoveElement(ziel, pos-1)
+	}
+
+	return RemoveElement(append(ziel, list[0]), pos-1)
 }

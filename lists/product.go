@@ -6,5 +6,9 @@ package lists
 // Sie können die Hilfsfunktion Empty aus empty.go verwenden.
 func Product(list []int) int {
 	// TODO
-	return 0
+	if Empty(list) {
+		return 1
+	}
+
+	return Product(list[1:]) * list[0]
 }
