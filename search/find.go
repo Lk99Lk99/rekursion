@@ -11,12 +11,8 @@ func Find(list []int, x int) int {
 	}
 
 	if list[0] == x {
-		return count
+		return +0
 	}
 
-	return Find(list[1:], x)
-}
-
-func count(x int) int {
-	return x + 1
+	return Find(list[1:], x) + 1
 }
